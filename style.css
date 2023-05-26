@@ -1,0 +1,151 @@
+:root {
+    --main-light: #efebe0;
+    --main-dark: #202124;
+    --main-color: #F76900;
+    --accent: #6C5A49;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  border: none;
+  appearance: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+    background-color: var(--main-light);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        'sidebar header'
+        'sidebar content';
+}
+
+.picture {
+    border-radius: 50%;
+    background-color: var(--main-light);
+    border: 3px solid var(--main-dark);
+}
+/* --- --- --- --- --- HEADER --- --- --- --- --- --- */
+
+.header{
+    background-color: var(--accent);
+    grid-area: header;
+    padding: 0 3rem;
+    box-shadow: var(--main-dark);
+    z-index: 3;
+}
+
+.topnav {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.icon {
+    width: 1.8rem;
+}
+
+.search > #search {
+    display: inline-block;
+    border: 0;
+    background-color: var(--main-light);
+    padding: 0.75em 2em;
+    outline-color: var(--main-dark);
+    margin-left: 1.25rem;
+    border-radius: 99em;
+    width: clamp(80%, 700px);
+}
+
+.account {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.account .picture {
+    margin: 0 1rem 0 2.5rem;
+    height: 60px;
+}
+
+.bottomnav {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile .greeting {
+    font-size: 1.5rem;
+}
+
+.profile .user {
+    font-weight: 800;
+}
+
+.profile .username{
+    color: var(--main-color);
+}
+.profile .picture {
+    margin-right: 2.5rem;
+    height: 120px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 2rem;
+}
+
+.btn {
+    font-weight: 800;
+    padding: 0.75em 2.3em;
+    font-size: 1.2rem;
+    background-color: var(--main-color);
+}
