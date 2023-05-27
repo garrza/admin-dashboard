@@ -208,7 +208,7 @@ body {
 
 .content{
     grid-area: content;
-    padding: 2rem;
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: min-content 1fr;
@@ -220,6 +220,9 @@ body {
 
 .quotes {
     grid-area: quotes;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 2rem;
 }
 
 .card {
@@ -244,11 +247,10 @@ body {
     font-size: 10rem;
     line-height: 1em;
     text-align: center;
-    margin: 40px auto;
+    margin: 1rem;
     overflow: hidden;
     padding-left: 3rem;
     padding-right: 3rem;;
-    padding-bottom: 1rem;
     color: var(--main-light);
 }
 
@@ -303,4 +305,35 @@ body {
 
 .numbers__window__digit--5 {
     animation-iteration-count: 15;
+}
+
+.trending {
+    grid-area: trending;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    margin: 1rem;
+    font-weight: 800;
+}
+
+#effect-example-1 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#effect-example-1 tbody td {
+  margin-inline-start: 10px;
+  margin-inline-end: 20px;
+  box-shadow:
+    1px -1px 1px lightgrey,
+    2px -2px 1px lightgrey,
+    3px -3px 1px lightgrey,
+    4px -4px 1px lightgrey,
+    5px -5px 1px lightgrey,
+    6px -6px 1px lightgrey,
+    7px -7px 1px lightgrey,
+    8px -8px 1px lightgrey,
+    9px -9px 1px lightgrey,
+    10px -10px 1px lightgrey;
 }
